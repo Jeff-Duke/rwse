@@ -4,7 +4,9 @@
   "description": "A boiler plate for building react apps using webpack, sass and Enzyme",
   "main": "lib/index.js",
   "scripts": {
-    "test": "npm run test"
+    "start": "webpack-dev-server --hot --inline --content-base ./public",
+    "build": "webpack",
+    "test": "mocha --require test/helpers/setup.js"
   },
   "repository": {
     "type": "git",
@@ -32,6 +34,8 @@
     "chai": "^3.5.0",
     "css-loader": "^0.26.1",
     "enzyme": "^2.6.0",
+    "file-loader": "^0.10.1",
+    "loader-utils": "^1.0.3",
     "mocha": "^3.2.0",
     "mocha-loader": "^1.0.0",
     "node-sass": "^4.1.1",
@@ -39,6 +43,7 @@
     "resolve-url-loader": "^1.6.1",
     "sass-loader": "^4.1.1",
     "style-loader": "^0.13.1",
+    "url-loader": "^0.5.8",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2"
   },
